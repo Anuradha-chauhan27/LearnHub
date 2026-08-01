@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-item svg {
+    margin-bottom: 15px;
+    margin-right: 0 !important;
+  }
+
+}

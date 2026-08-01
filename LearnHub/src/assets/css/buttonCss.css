@@ -1,0 +1,107 @@
+.customButton {
+    background-color: #7C3AED;
+    border: 2px solid #7C3AED;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.landedButton {
+    background: #7C3AED;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: "none";
+}
+
+.aboutBtn {
+    background: transparent;
+    color: black;
+    padding: 11px 40px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: "none";
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+.aboutBtn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(48, 46, 52, 0.35);
+}
+
+.courseBtn {
+    width: 100%;
+    height: 50px;
+
+    background: transparent;
+    color: #fff;
+
+    border: 1px solid #6c4df6;
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+.courseBtn:hover {
+    background:#6c4df6;
+    color:#fff;
+}
+
+.watchBtn {
+    background: transparent;
+    color: black;
+    padding: 18px 60px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: "none";
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.watchBtn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(83, 50, 149, 0.35);
+}
+
+.dCourseBtn {
+    background: transparent;
+    color: whitesmoke;
+    padding: 11px 30px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: "none";
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 400px;
+}
+
+.dCourseBtn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(83, 50, 149, 0.35);
+}
+
+.continueBtn {
+    width: 30%;
+    height: 50px;
+    font-size:larger;
+    background: transparent;
+    color: #fff;
+
+    border: 1px solid #6c4df6;
+    border-radius: 12px;
+
+    transition: .3s;
+}
+
+.continueBtn:hover {
+    background:#6c4df6;
+    color:#fff;
+}

@@ -1,0 +1,308 @@
+.about-page {
+  background: #050507;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 5, 7, 0.98) 10%,
+      rgba(5, 5, 7, 0.7) 55%,
+      rgba(5, 5, 7, 0.2)
+    );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin-left: 8%;
+}
+
+.about-hero-content > span,
+.section-tag {
+  color: #a855f7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-hero-content h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.about-hero-content h1 strong {
+  color: #7c3aed;
+  text-shadow: 0 0 35px rgba(124, 58, 237, 0.7);
+}
+
+.about-hero-content p {
+  max-width: 550px;
+  color: #a6a6b3;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.about-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-content {
+  text-align: center;
+  padding: 60px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(124, 58, 237, 0.1),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  border-radius: 25px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 800;
+  margin: 20px 0 30px;
+}
+
+.about-content h2 span,
+.empower-title span {
+  color: #7c3aed;
+}
+
+.about-content p {
+  max-width: 850px;
+  margin: 0 auto 20px;
+  color: #a7a7b3;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.empower-section {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.empower-title {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-top: 15px;
+}
+
+.empower-card {
+  position: relative;
+  min-height: 300px;
+  padding: 45px 35px;
+  text-align: left;
+
+  background: #0b0b10;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.empower-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(124, 58, 237, 0.25);
+}
+
+.empower-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #a855f7
+  );
+
+  border-radius: 18px;
+
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+}
+
+.empower-card h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.empower-card p {
+  color: #90909d;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+.card-number {
+  position: absolute;
+  right: 25px;
+  bottom: 5px;
+
+  color: rgba(124, 58, 237, 0.12);
+
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.story-section {
+  position: relative;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.story-section img {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.story-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(5, 5, 7, 0.65),
+      rgba(5, 5, 7, 0.95)
+    );
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 850px;
+
+  padding: 30px;
+}
+
+.story-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 25px 0;
+}
+
+.story-content p {
+  color: #aaaab5;
+  margin-bottom: 30px;
+}
+
+.story-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px 28px;
+
+  color: #fff;
+  text-decoration: none;
+
+  background: linear-gradient(
+    90deg,
+    #6d28d9,
+    #9333ea
+  );
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+
+  transition: 0.3s ease;
+}
+
+.story-btn:hover {
+  color: #fff;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 0 45px rgba(168, 85, 247, 0.65);
+}
+
+
+@media (max-width: 768px) {
+
+  .about-hero {
+    min-height: 500px;
+  }
+
+  .about-hero-content {
+    margin: 0;
+    padding: 30px;
+  }
+
+  .about-content {
+    padding: 35px 25px;
+  }
+
+  .about-section {
+    padding-top: 60px;
+  }
+
+  .empower-section {
+    padding-top: 70px;
+  }
+
+  .empower-card {
+    min-height: auto;
+  }
+
+  .story-section {
+    min-height: 550px;
+  }
+}

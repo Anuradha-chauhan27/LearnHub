@@ -1,0 +1,148 @@
+.contact-page {
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.contact-page h1 {
+  font-size: 42px;
+  background: linear-gradient(90deg, #ffffff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-page .text-muted {
+  color: #7e86a2 !important;
+  font-weight: bold;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: linear-gradient(
+    145deg,
+    rgba(17, 13, 32, 0.96),
+    rgba(7, 8, 18, 0.98)
+  ) !important;
+
+  color: #ffffff !important;
+
+  border: 1px solid rgba(124, 58, 237, 0.3) !important;
+  border-radius: 22px !important;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(124, 58, 237, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.contact-info-card:hover,
+.contact-form-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(168, 85, 247, 0.6) !important;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(124, 58, 237, 0.18);
+}
+
+.contact-info-card h3,
+.contact-form-card h3 {
+  color: #ffffff;
+}
+
+.contact-info-card h6 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-icon {
+  color: #a855f7;
+
+  padding: 10px;
+  width: 48px;
+  height: 48px;
+
+  border-radius: 14px;
+
+  background: rgba(124, 58, 237, 0.12);
+
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.contact-info-card .d-flex:hover .contact-icon {
+  transform: scale(1.1);
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  color: #ffffff;
+
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+}
+
+.contact-form-card .form-label {
+  color: #c5c8d3;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.contact-form-card .form-control {
+  background: rgba(8, 10, 20, 0.9);
+
+  color: #ffffff;
+
+  border: 1px solid #292d3e;
+  border-radius: 10px;
+
+  padding: 12px 14px;
+
+  transition: 0.3s ease;
+}
+
+.contact-form-card .form-control::placeholder {
+  color: #62687a;
+}
+
+.contact-form-card .form-control:focus {
+  background: rgba(8, 10, 20, 1);
+
+  color: #ffffff;
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.12),
+    0 0 20px rgba(124, 58, 237, 0.15);
+}
+
+
+.contact-form-card .form-control.is-invalid {
+  border-color: #ef4444;
+}
+
+.contact-form-card .invalid-feedback {
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+
+  .contact-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-page h1 {
+    font-size: 34px;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    border-radius: 16px !important;
+  }
+}

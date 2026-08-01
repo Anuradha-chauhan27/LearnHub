@@ -1,0 +1,110 @@
+.learning-page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding: 40px;
+}
+
+.course-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.learning-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.video-section,
+.playlist {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.video-player {
+  background: black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-title {
+  margin-top: 15px;
+}
+
+.playlist {
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.lesson {
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: .3s;
+}
+
+.lesson:hover {
+  background: rgba(124,58,237,.25);
+}
+
+.lesson.active {
+  background: #7c3aed;
+}
+
+.playing {
+  color: yellow;
+}
+
+.progress-custom {
+  margin-top: 25px;
+  height: 22px;
+  border-radius: 30px;
+}
+
+.learning-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.prev-btn,
+.next-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+
+.prev-btn:disabled,
+.next-btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.locked {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.complete-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #16a34a;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.complete-btn:hover {
+  background: #15803d;
+}

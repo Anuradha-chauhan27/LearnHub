@@ -1,0 +1,129 @@
+.learnhub-navbar {
+  background: linear-gradient(90deg, #08050f 0%, #100820 50%, #08050f 100%);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15),
+              0 0 20px rgba(56, 189, 248, 0.05);
+  backdrop-filter: blur(15px);
+}
+
+/* Logo */
+.navbar-logo {
+  max-width: 220px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar Links */
+.nav-item-link {
+  color: #fff !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-item-link:hover {
+  color: #a78bfa !important;
+  background: rgba(124, 58, 237, 0.12);
+  transform: translateY(-2px);
+}
+
+.nav-item-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7c3aed, #38bdf8);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-item-link:hover::after {
+  width: 70%;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: 1px solid rgba(167, 139, 250, 0.4) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.5) !important;
+}
+
+/* Profile */
+.user-profile-pill {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  margin-left: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.2),
+    rgba(168, 85, 247, 0.08)
+  );
+  border: 1px solid rgba(168, 85, 247, 0.45);
+  transition: 0.3s;
+}
+
+.user-profile-pill:hover {
+  transform: translateY(-2px);
+  border-color: #a855f7;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.35);
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Notification */
+.notification-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+
+.notification-link:hover .notification-icon {
+  color: #a78bfa;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

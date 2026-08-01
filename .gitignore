@@ -1,0 +1,21 @@
+# Dependencies
+LearnHub/node_modules/
+backend/node_modules/
+
+# Environment files
+backend/.env
+LearnHub/.env
+
+# Build folders
+LearnHub/dist/
+backend/dist/
+
+# Uploads (optional)
+backend/uploads/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
