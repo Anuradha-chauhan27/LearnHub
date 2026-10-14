@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import { Course } from "./models/courses.js";
+import { User } from "./models/user.js";
 dotenv.config();
 
 const createVideo = (title, fileName) => ({
@@ -109,7 +110,7 @@ const courses = [
       duration: "40 Hours",
       lessons: 38,
       projects: 12,
-      instructor: "Ankit Verma",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -162,7 +163,7 @@ const courses = [
       duration: "35 Hours",
       lessons: 34,
       projects: 8,
-      instructor: "Priya Singh",
+      instructor: "Rahul Sharma",
     }),
 
     "covers": [
@@ -214,7 +215,7 @@ const courses = [
       duration: "28 Hours",
       lessons: 30,
       projects: 7,
-      instructor: "Amit Kumar",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -266,7 +267,7 @@ const courses = [
       duration: "34 Hours",
       lessons: 36,
       projects: 9,
-      instructor: "Neha Sharma",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -318,7 +319,7 @@ const courses = [
       duration: "50 Hours",
       lessons: 48,
       projects: 15,
-      instructor: "Dr. Vivek Sharma",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -369,7 +370,7 @@ const courses = [
       duration: "55 Hours",
       lessons: 52,
       projects: 18,
-      instructor: "Dr. Anjali Verma",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -420,7 +421,7 @@ const courses = [
       duration: "36 Hours",
       lessons: 34,
       projects: 10,
-      instructor: "Saurabh Gupta",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -472,7 +473,7 @@ const courses = [
       duration: "32 Hours",
       lessons: 31,
       projects: 8,
-      instructor: "Deepak Sharma",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -524,7 +525,7 @@ const courses = [
       duration: "38 Hours",
       lessons: 35,
       projects: 15,
-      instructor: "Sneha Kapoor",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -575,7 +576,7 @@ const courses = [
       duration: "40 Hours",
       lessons: 37,
       projects: 12,
-      instructor: "Karan Malhotra",
+      instructor: "Rahul Sharma",
     }),
     "covers": [
       "30+ Hours on-demand video",
@@ -605,21 +606,60 @@ const courses = [
   },
 ]
 
+
+
 const seedCourses = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URl);
 
-    await Course.deleteMany();
+    // Find all instructor users
+    const instructors = await User.find({
+      role: "instructor",
+    });
 
-    await Course.insertMany(courses);
+    // Create a map: instructor name -> MongoDB ObjectId
+    const instructorMap = new Map(
+      instructors.map((user) => [
+        user.name,
+        user._id,
+      ])
+    );
 
-    console.log("✅ Courses Seeded Successfully");
+    // Replace instructor names with actual ObjectIds
+    const updatedCourses = courses.map((course) => {
+      const instructorId = instructorMap.get(
+        course.instructor
+      );
 
-    process.exit();
+      if (!instructorId) {
+        throw new Error(
+          `Instructor not found: ${course.instructor}`
+        );
+      }
+
+      return {
+        ...course,
+        instructor: instructorId,
+      };
+    });
+
+    // WARNING: Deletes all existing courses
+    await Course.deleteMany({});
+
+    await Course.insertMany(updatedCourses);
+
+    console.log("Courses Seeded Successfully");
+
+    await mongoose.disconnect();
+    process.exit(0);
   } catch (error) {
-    console.log(error);
+    console.error("Seeding failed:", error.message);
+    await mongoose.disconnect().catch(() => {});
     process.exit(1);
   }
 };
 
 seedCourses();
+
+
+

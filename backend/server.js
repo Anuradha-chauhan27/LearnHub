@@ -36,5 +36,5 @@ app.use("/api/wishlist", wishlistRoutes);
 app.use("/api/admin", adminRoutes);
 
 app.listen(PORT,()=>{
-    console.log("server 5000 Started")
+    console.log("server 5001 Started")
 })

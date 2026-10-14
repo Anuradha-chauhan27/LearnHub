@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../../../assets/css/notification.css";
+import { Navb } from "../../../Components/Navb";
+
 
 export const Notifications = () => {
   const [notifications, setNotifications] = useState([]);
@@ -29,7 +31,9 @@ export const Notifications = () => {
   };
 
   return (
+    
     <div className="notifications-page">
+      <Navb/>
       <h1>🔔 Notifications</h1>
 
       {notifications.length === 0 ? (
